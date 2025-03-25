@@ -30,7 +30,7 @@ brew install whois bind curl
 
 ### Installation
 ```bash
-git clone https://github.com/RayGray/website-info-tool.git
+git clone https://github.com/RayGray031/website-info-tool.git
 cd website-info-tool
 chmod +x website_info.sh
 ```
