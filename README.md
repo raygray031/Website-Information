@@ -1,105 +1,93 @@
-# 🌍 Website Information Tool by RayGray
+# 🌐 Website Information Tool
 
-This is a **simple and powerful Bash script** that retrieves **publicly available information** about a website. The script is designed for **legal and ethical use** only.
+A lightweight Bash script to retrieve publicly available website data for legal security research and troubleshooting.
 
-## 🚀 Features
-- **Whois Lookup**: Get domain registration details.
-- **IP Address & DNS Records**: Find the IP address and DNS info.
-- **Nameservers**: Check where the domain is hosted.
-- **Website Headers & Status**: Get HTTP response headers.
-- **Easy to Use**: Just enter the website name, and the script does the rest!
+**Created by RayGray**  
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-## 🛠️ Prerequisites
-This script requires the following tools:
-- `whois`
-- `dig`
-- `nslookup`
-- `curl`
+## ✨ Features
 
-### **For Termux (Android)**
-Install the required tools:
+| Feature          | Description                          | Tool Used |
+|------------------|--------------------------------------|-----------|
+| Whois Lookup     | Domain registration details          | `whois`   |
+| DNS Analysis     | IP address and record types          | `dig`     |
+| Nameserver Info  | Hosting provider details             | `nslookup`|
+| HTTP Inspection  | Response headers & status codes      | `curl`    |
+
+## 🚀 Quick Start
+
+### Prerequisites
 ```bash
-pkg update && pkg upgrade
-pkg install whois dnsutils curl
-
-For Linux (Ubuntu/Debian)
-
+# Linux (Debian/Ubuntu)
 sudo apt update && sudo apt install whois dnsutils curl -y
 
-For macOS
+# Termux (Android)
+pkg update && pkg install whois dnsutils curl
 
+# macOS
 brew install whois bind curl
+```
 
-📥 Installation
-
-Clone the repository:
-
-git clone https://github.com/<your_username>/<your_repository>.git
-cd <your_repository>
-
-Or manually create the file:
-
-nano website_info.sh
-
-Paste the script into the file.
-
-Save and exit (CTRL + X, then Y, then Enter).
-
-
-▶️ How to Run
-
-Make the script executable:
-
+### Installation
+```bash
+git clone https://github.com/RayGray/website-info-tool.git
+cd website-info-tool
 chmod +x website_info.sh
+```
 
-Run the script:
-
+### Usage
+```bash
 ./website_info.sh
+> Enter website URL (without protocol): example.com
+```
 
-📌 Example Usage
+## 📊 Sample Output
+```text
+🔍 Whois Information
+──────────────────────────────────
+Domain: EXAMPLE.COM
+Registrar: Example Registrar Inc.
+Created: 1992-01-01
+Expires: 2030-12-31
 
-After running the script, enter a website domain without https:// or http://, like this:
+🌍 DNS Records
+──────────────────────────────────
+A Record: 93.184.216.34
+MX Records:
+10 mail.example.com
 
-Enter a website URL (without https:// or http://): example.com
-
-Example Output
-
-🔍 Whois Information:
--------------------------------------------------
-Domain Name: EXAMPLE.COM
-Registrar WHOIS Server: whois.example-registrar.com
-Updated Date: 2024-03-10
-Creation Date: 1995-01-01
-
-🌍 IP Address and DNS Records:
--------------------------------------------------
-93.184.216.34
-
-🖥️ Nameservers:
--------------------------------------------------
-example.ns.cloudflare.com
-
-📡 Website Headers and Status:
--------------------------------------------------
+🛡️ HTTP Headers
+──────────────────────────────────
 HTTP/2 200
-server: nginx
-content-type: text/html; charset=UTF-8
-...
+server: cloudflare
+content-type: text/html; charset=utf-8
+```
 
-⚠️ Legal Disclaimer
+## ⚠️ Responsible Use Policy
+This tool only accesses:
+- Public DNS records
+- Whois database information
+- HTTP headers (equivalent to browser requests)
 
-This script only retrieves publicly available information. It does NOT perform hacking, scanning, or any illegal activity.
-Use this tool responsibly! 🚀
+**Prohibited Uses:**
+❌ Network scanning without permission  
+❌ Attempting to access non-public data  
+❌ Any illegal security testing  
 
-💡 Contributions
+## 🤝 Contributing
+We welcome:
+- Bug reports (via Issues)
+- Feature requests
+- Code improvements (via PRs)
 
-Feel free to contribute! Fork the repository, submit pull requests, or report issues.
+Please read our [Contribution Guidelines](CONTRIBUTING.md) first.
 
-📜 License
-
-This project is licensed under the MIT License. See LICENSE for details.
-
+## 📜 License
+MIT License - See [LICENSE](LICENSE) for details.
 
 ---
 
-Made with ❤️ by RayGray
+🛠️ Maintained with ♥ by RayGray  
+🔗 [Visit My GitHub Profile](https://github.com/RayGray031)
+```
+
